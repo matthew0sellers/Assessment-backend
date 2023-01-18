@@ -1,0 +1,9 @@
+
+html {
+    background-color: rgb(173, 173, 173);
+}
+
+#boomButton :hover {
+    color: azure;
+    background-color: red;
+}

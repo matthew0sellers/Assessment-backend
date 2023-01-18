@@ -16,5 +16,21 @@ module.exports = {
         let randomFortune = fortune[randomIndex];
       
         res.status(200).send(randomFortune);
-    }   
+    },   //
+    destroyAll: (req, res) => {
+        const warning = ["Strike 1", "I'll give you one last chance"];
+
+        let randomIndex = Math.floor(Math.random() * warning.length);
+        let randomWarning = warning[randomIndex];
+
+        res.status(200).send(randomWarning);
+    },
+    gameLink: (req, res) => {
+        const game = [`https://www.chess.com/`, `https://www.chess.com/`];
+      
+        let randomIndex = Math.floor(Math.random() * game.length);
+        let randomGame = game[randomIndex];
+      
+        res.status(200).send(randomGame);
+    }
 }
