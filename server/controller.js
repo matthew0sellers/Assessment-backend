@@ -32,5 +32,12 @@ module.exports = {
         let randomGame = game[randomIndex];
       
         res.status(200).send(randomGame);
-    }
+    },
+    delImg: (req, res) => {
+        const imgNum = ['del1', 'del2', 'del3', 'del4'];
+      
+        let randomIndex = Math.floor(Math.random() * imgNum.length);
+        let randomImg = imgNum[randomIndex];
+      
+        res.status(200).send(randomImg);
 }

@@ -27,9 +27,10 @@ fortuneBtn.addEventListener('click', getFortune)
 //
 const boomBtn = document.getElementById("boomButton")
 
-let clickState = 0
+
 
 const destroyAll = () => {
+    let clickState = 0
     clickState++;
     
     if (clickState ==1) axios.get("http://localhost:4000/api/warning/")
@@ -37,12 +38,7 @@ const destroyAll = () => {
             const data = res.data;
             alert(data);
         })
-        else if (clickState ==2) axios.get("http://localhost:4000/api/warning/")
-        .then(res => { 
-            const data = res.data;
-            alert(data);
-        })
-       else if (clickState ==3) {
+       else if (clickState ==2) {
             document.getElementById('boomButton').src="https://media.tenor.com/-g-Um3DDvV0AAAAd/explosion.gif";
             }
     clickState = 0
@@ -63,6 +59,14 @@ const gameLink = () => {
 
 
 
-// const delImgBtn = document.getElementById("delImgButton")
+const delImgBtn = document.getElementById("delImgButton")
 
-// delImgBtn.addEventListener = document.getElementById("delImgButton")
+const delImg = () => {
+    axios.get("http://localhost:4000/api/fortune/")
+        .then(res => { 
+            const data = res.data;
+            element.remove(Math.random(data));
+    });
+};
+
+delImgBtn.addEventListener = document.getElementById("delImgButton")
