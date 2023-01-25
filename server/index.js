@@ -18,4 +18,7 @@ app.get("/api/warning", destroyAll);
 
 app.get("/api/game", gameLink);
 
+app.get("/api/images", gameLink);
+
+
 app.listen(4000, () => console.log("Server running on 4000"));
